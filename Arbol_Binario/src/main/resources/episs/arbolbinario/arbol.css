@@ -1,0 +1,65 @@
+/* Este archivo define colores, fuentes, espacios y bordes de la interfaz.
+   Las reglas CSS no insertan, buscan ni eliminan datos del árbol.
+   Un selector como .titulo corresponde a getStyleClass().add("titulo") en Java.
+   Las propiedades de JavaFX comienzan con -fx-. */
+
+/* Estilo base aplicado desde el contenedor principal de la escena. */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #0f172a;
+}
+/* Título principal y encabezados de las tarjetas. */
+.titulo {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+.subtitulo {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+/* Textos de ayuda y resumen de los datos del árbol. */
+.secundario { -fx-text-fill: #64748b; }
+.estadisticas { -fx-font-weight: bold; -fx-text-fill: #334155; }
+/* Panel blanco: padding es el espacio interior y radius redondea las esquinas. */
+.tarjeta {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 12;
+}
+/* Apariencia común a todos los botones. El cursor hand muestra una mano al apuntarlos. */
+.button {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 9 14;
+    -fx-cursor: hand;
+    -fx-text-fill: #334155;
+}
+/* :hover se aplica al pasar el puntero; :focused al recibir el foco de teclado. */
+.button:hover { -fx-background-color: #e2e8f0; }
+.button:focused { -fx-border-color: #2563eb; -fx-border-width: 2; -fx-padding: 8 13; }
+/* Esta regla selecciona un botón que además tiene el estilo "principal": Insertar. */
+.button.principal { -fx-background-color: #2563eb; -fx-border-color: #2563eb; -fx-text-fill: white; }
+.button.principal:hover { -fx-background-color: #1d4ed8; }
+/* Campo donde el usuario escribe el entero que desea utilizar. */
+.text-field {
+    -fx-padding: 9 10;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #cbd5e1;
+    -fx-background-color: white;
+}
+.text-field:focused { -fx-border-color: #2563eb; }
+/* El viewport es la parte visible del contenido dentro de un panel desplazable. */
+.scroll-pane { -fx-background-color: transparent; -fx-padding: 0; }
+.scroll-pane > .viewport { -fx-background-color: white; }
+.lienzo { -fx-background-color: white; }
+/* Mensaje que aparece en lugar de los círculos cuando no hay nodos. */
+.vacio { -fx-text-fill: #64748b; -fx-font-size: 16px; -fx-text-alignment: center; }
